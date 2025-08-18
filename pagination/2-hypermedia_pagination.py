@@ -64,7 +64,7 @@ class Server:
             return []
         return dataset[start:end]
 
-    def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict[str, object]:
+    def get_hyper(self, page: int = 1, page_size: int = 10)->Dict[str, object]:
         """
         Returns a dictionary with hypermedia pagination info.
 
@@ -73,7 +73,8 @@ class Server:
             page_size (int): The number of items per page.
 
         Returns:
-            Dict[str, object]: Dictionary with page data and pagination metadata.
+            Dict[str, object]: Dictionary with page data and
+            pagination metadata.
         """
         data = self.get_page(page, page_size)
         total_items = len(self.dataset())
