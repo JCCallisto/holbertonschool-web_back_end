@@ -2,7 +2,8 @@
 
 """
 Deletion-resilient hypermedia pagination.
-This module contains a Server class for deletion-resilient pagination of a dataset.
+This module contains a Server class for deletion-resilient
+pagination of a dataset.
 """
 
 import csv

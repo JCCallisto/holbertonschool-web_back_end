@@ -73,14 +73,21 @@ class Server:
             page_size (int): The number of items per page.
 
         Returns:
-            Dict[str, object]: Dictionary with page data and pagination metadata.
+            Dict[str, object]: Dictionary with page data
+            and pagination metadata.
         """
         data = self.get_page(page, page_size)
         total_items = len(self.dataset())
         total_pages = math.ceil(total_items / page_size)
         page_size_actual = len(data)
-        next_page = page + 1 if (page < total_pages and page_size_actual > 0) else None
-        prev_page = page - 1 if (page > 1 and page_size_actual > 0) else None
+        next_page = (
+            page + 1 if (page < total_pages and page_size_actual > 0)
+            else None
+        )
+        prev_page = (
+            page - 1 if (page > 1 and page_size_actual > 0)
+            else None
+        )
         return {
             "page_size": page_size_actual,
             "page": page,
