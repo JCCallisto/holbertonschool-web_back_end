@@ -63,8 +63,8 @@ class Server:
         if start >= len(dataset):
             return []
         return dataset[start:end]
-    
-def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict[str, object]:
+
+    def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict[str, object]:
         """
         Returns a dictionary with hypermedia pagination info.
 
@@ -81,11 +81,13 @@ def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict[str, object]:
         total_pages = math.ceil(total_items / page_size)
         page_size_actual = len(data)
         next_page = (
-            page + 1 if (page < total_pages and page_size_actual > 0)
+            page + 1
+            if (page < total_pages and page_size_actual > 0)
             else None
         )
         prev_page = (
-            page - 1 if (page > 1 and page_size_actual > 0)
+            page - 1
+            if (page > 1 and page_size_actual > 0)
             else None
         )
         return {
