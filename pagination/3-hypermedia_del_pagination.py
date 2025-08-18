@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python3#!/usr/bin/env python3
 
 """
 Deletion-resilient hypermedia pagination.
@@ -8,6 +8,7 @@ This module contains a Server class for deletion-resilient pagination of a datas
 import csv
 import math
 from typing import List, Dict, Optional
+
 
 class Server:
     """Server class to paginate a database of popular baby names.

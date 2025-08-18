@@ -20,13 +20,13 @@ def index_range(page: int, page_size: int) -> Tuple[int, int]:
     Returns:
         Tuple[int, int]: A tuple containing the start and end index.
     """
-    start: int = (page - 1) * page_size
-    end: int = page * page_size
-    return (start, end)
+    start = (page - 1) * page_size
+    end = page * page_size
+    return start, end
+
 
 class Server:
-    """Server class to paginate a database of popular baby names.
-    """
+    """Server class to paginate a database of popular baby names."""
     DATA_FILE = "Popular_Baby_Names.csv"
 
     def __init__(self):
@@ -43,9 +43,7 @@ class Server:
                 reader = csv.reader(f)
                 dataset = [row for row in reader]
             self.__dataset = dataset[1:]
-
         return self.__dataset
-
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
         """
@@ -65,7 +63,6 @@ class Server:
         if start >= len(dataset):
             return []
         return dataset[start:end]
-
 
     def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict[str, object]:
         """
