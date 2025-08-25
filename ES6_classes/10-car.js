@@ -6,11 +6,7 @@ export default class Car {
   }
 
   cloneCar() {
-    // Use Symbol.species to get the correct constructor
-    const Species = this.constructor[Symbol.species] || this.constructor;
-    return new Species();
+    // Return a new instance of the same class as the current object
+    return new this.constructor();
   }
 }
-
-// Define Symbol.species for the Car class
-Car[Symbol.species] = Car;
