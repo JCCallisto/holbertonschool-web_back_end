@@ -1,5 +1,5 @@
-import AppController from '../controllers/AppController.js';
-import StudentsController from '../controllers/StudentsController.js';
+import AppController from '../controllers/AppController';
+import StudentsController from '../controllers/StudentsController';
 
 /**
  * Binds the routes to the appropriate handler in the
