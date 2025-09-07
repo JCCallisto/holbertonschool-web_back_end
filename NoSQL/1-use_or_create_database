@@ -1,2 +1,4 @@
+#!usr/bin/env python3
+
 // Create or use the database my_db
 use my_db
