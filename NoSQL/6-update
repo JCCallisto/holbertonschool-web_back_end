@@ -1,5 +1,3 @@
-#!usr/bin/env python3
-
 // Update documents with name="Holberton school" by adding address
 db.school.updateMany(
   { name: "Holberton school" },
